@@ -22,7 +22,9 @@ export default function Header() {
     <>
       <HeaderContainer>
         <HeaderFlex>
-          <Logo />
+          <Link href="/">
+            <Logo />
+          </Link>
           <ProfileSection>
             <Button>
               <img src="/icons/info.svg" alt="release notes" />

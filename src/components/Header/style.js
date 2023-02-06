@@ -79,7 +79,7 @@ export const ProfileMenu = styled.div`
   position: absolute;
   width: 172px;
   height: 120px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.7);
   top: 7%;
   right: 5%;
   z-index: 10;
