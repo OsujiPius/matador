@@ -4,18 +4,23 @@ import Header from "../components/Header";
 import Nav from "../components/Nav";
 import Stats from "../components/Stats";
 import Listings from "../components/Listings";
+import axios from "axios";
 
 export default function Home() {
-  async function fetchData() {
-    const res = await fetch(
-      "https://dev.matadortrust.com/v2/developers/dashboard_data"
-    );
-    return res.json();
+  async function getData() {
+    try {
+      const response = await axios.get(
+        "https://dev.matadortrust.com/v2/developers/dashboard_data"
+      );
+      return response.data;
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   const { data, isLoading, error, isFetching } = useQuery(
     "matadorData",
-    fetchData
+    getData
   );
 
   console.log(data);
