@@ -61,6 +61,7 @@ export const Dropdown = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 
   img:nth-of-type(2) {
     cursor: pointer;

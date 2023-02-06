@@ -3,6 +3,7 @@ import { useQuery } from "react-query";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
 import Stats from "../components/Stats";
+import Chart from "../components/Chart";
 import Listings from "../components/Listings";
 import axios from "axios";
 
@@ -18,16 +19,13 @@ export default function Home() {
     }
   }
 
-  const { data, isLoading, error, isFetching } = useQuery(
-    "matadorData",
-    getData
-  );
+  const { data, isLoading, isFetching } = useQuery("matadorData", getData);
 
   console.log(data);
 
-  // if (isFetching || isLoading) {
-  //   return <h1 className="loader">Loading...</h1>;
-  // }
+  if (isFetching || isLoading) {
+    return <h1 className="loader">Loading...</h1>;
+  }
 
   return (
     <>
@@ -41,6 +39,7 @@ export default function Home() {
       <Nav />
       <main>
         <div className="stats-section">
+          <Chart />
           <Stats data={data} />
         </div>
         <div className="listing-section">

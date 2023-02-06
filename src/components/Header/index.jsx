@@ -44,14 +44,10 @@ export default function Header() {
                 <img src="/icons/settings.svg" alt="mic" />
               </Button>
             </IconsContainer>
-            <Dropdown>
+            <Dropdown onClick={handleDropDownToggle}>
               <img src="icons/user.svg" alt="user" />
               <UserName>Ahmed Ali</UserName>
-              <img
-                src="icons/arrow-up.svg"
-                alt="arrow"
-                onClick={handleDropDownToggle}
-              />
+              <img src="icons/arrow-up.svg" alt="arrow" />
             </Dropdown>
             {dropDown && (
               <ProfileMenu>
