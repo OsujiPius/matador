@@ -13,9 +13,6 @@ export default function Selector({ borderColor, placeholder }) {
       fontWeight={500}
       bg="white"
       borderRadius={16}
-    >
-      <option value="option1">Jan 2022 - Sep 2022</option>
-      <option value="option2">Jan 2022 - Sep 2022</option>
-    </Select>
+    ></Select>
   );
 }

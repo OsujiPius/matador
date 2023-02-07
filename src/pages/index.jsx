@@ -6,6 +6,7 @@ import Stats from "../components/Stats";
 import Chart from "../components/Chart";
 import Listings from "../components/Listings";
 import axios from "axios";
+import { Spinner } from "@chakra-ui/react";
 
 export default function Home() {
   async function getData() {
@@ -24,7 +25,17 @@ export default function Home() {
   console.log(data);
 
   if (isFetching || isLoading) {
-    return <h1 className="loader">Loading...</h1>;
+    return (
+      <div className="loader">
+        <Spinner
+          thickness="4px"
+          speed="0.65s"
+          emptyColor="gray.200"
+          color="green.300"
+          size="xl"
+        />
+      </div>
+    );
   }
 
   return (
