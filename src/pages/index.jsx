@@ -39,7 +39,7 @@ export default function Home() {
       <Nav />
       <main>
         <div className="stats-section">
-          <Chart />
+          <Chart data={data} />
           <Stats data={data} />
         </div>
         <div className="listing-section">

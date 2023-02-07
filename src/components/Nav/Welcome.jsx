@@ -12,7 +12,7 @@ export default function Welcome() {
           </div>
           <h2>Welcome to your Dashboard</h2>
         </Message>
-        <Selector />
+        <Selector borderColor={"#E4E4E4"} placeholder={"Jan 2022 - Sep 2022"} />
       </WelcomeContent>
     </WelcomeContainer>
   );

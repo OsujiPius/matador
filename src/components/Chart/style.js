@@ -29,3 +29,45 @@ export const ChartHeader = styled.div`
     margin-top: 7px;
   }
 `;
+
+export const ChartBody = styled.div`
+  height: 180px;
+  display: flex;
+`;
+
+export const Nums = styled.div`
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+`;
+
+export const NumItem = styled.div`
+  width: 189px;
+  height: 73px;
+  background: #ffffff;
+  border: 1px solid #e4e4e4;
+  border-radius: 12px;
+  padding: 10px 0 0 5px;
+
+  div {
+    display: flex;
+    padding: 5px 0;
+    gap: 4px;
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: left;
+    margin: 3px 2px 0 0;
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 13px;
+    color: #3d3d3d;
+  }
+`;
